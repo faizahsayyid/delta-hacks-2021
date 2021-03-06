@@ -56,11 +56,11 @@ input[type=submit]{
     text-decoration: none;
     display: inline-block;
     margin: 4px 2px;
-    transition-duration: 0.4s; /*in place if there's time to implement a hover*/
+    transition-duration: 0.4s;
     cursor: pointer;
 }
 
-.text-center{
+.submit_button{
     text-align: center;
 }
 

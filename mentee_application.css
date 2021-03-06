@@ -1,11 +1,14 @@
 body {
-    background-color: rgb(248, 244, 239);
+    background-color: rgb(240, 211, 176);
+    /*background-image: linear-gradient(to bottom right, rgb(9, 106, 197), rgb(200, 152, 231));*/
 }
+
 
 .header {
     padding: 20px;
     text-align: center;
-
+    font-family: 'Assistant', sans-serif;
+    font-weight: 700;
 }
 h1{
     color: #12122e;
@@ -15,13 +18,15 @@ p {
 }
 
 .section1, .section2, .section3 {
-    background-color: rgb(100, 204, 207);
+    background-color: rgba(100, 203, 207, 0.76);
     width: 500px;
     border:none;
     border-left: 8px solid rgb(33, 41, 153);
     border-radius: 4px;
     padding: 30px;
     margin: 20px;
+    font-family: 'Assistant', sans-serif;
+    font-weight: 600;
 }
 
 input[type=text] {
@@ -50,8 +55,12 @@ input[type=submit]{
     text-decoration: none;
     display: inline-block;
     margin: 4px 2px;
-    transition-duration: 0.4s; /*in place if there's time to implement a hover*/
+    transition-duration: 0.4s;
     cursor: pointer;
+}
+
+.submit_button{
+    text-align: center;
 }
 
 input[type=submit]{
