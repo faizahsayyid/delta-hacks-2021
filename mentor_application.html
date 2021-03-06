@@ -12,7 +12,7 @@
         <h2>General info</h2>
         <p>Please start with telling us who you are and how to contact you.</p>
     </body>
-    <form>
+    <form action=/mentor_app_page.php>
         <!-- all identifiers are subject to change-->
         <label for="fname">First name:</label><br>
         <input type=text id="fname" name="fname"><br> 
@@ -21,12 +21,10 @@
         <lable for="email">Email:</lable><br>
         <input type=email id="email" name="email"><br>
         <br>
-    </form>
-    <body>
+   
         <h2>Experience level</h2>
         <p>Where would you say your skills lie? What have you previously worked with? <br>The STEM field is diverse. Where do your interests fall? What can you offer a mentee? Let us know.</p>
-    </body>
-    <form>
+   
         <!--what grade are they in-->
         <label for="grade">Grade/Year:</label><br>
         <input type=radio id="11" name="grade" value="11">
@@ -47,14 +45,21 @@
         <label for="other_gr">Other: </label>
         <input type=text id="other_gr" name="other_gr"><br>
         <br>
-        <!--for what stuff they've do before--->
-        <lable for="skills">Previous experience. I have tried:</lable><br>
-        <input type=checkbox id="temp1" name="temp1" value="temp1">
-        <label for=temp1>Coding</label><br>
-        <input type=checkbox id="temp2" name="temp2" value="temp2">
-        <label for="temp2">AutoCAD</label><br> 
+        <!--for what stuff mentors have done before--->
+        <lable for="skills">Previous experience:</lable><br>
+        <input type=checkbox id="code" name="code" value="code">
+        <label for="code">Coding</label><br>
+        <input type=checkbox id="model" name="model" value="model">
+        <label for="model">3D Modeling</label><br> 
+        <input type=checkbox id="math" name="math" value="math">
+        <label for="math">Mathematic Modeling</label><br> 
+        <input type=checkbox id="bio" name="bio" value="bio">
+        <label for="bio">Disections</label><br> 
+        <!--as an example, other experiences can be added but probably not with other-->
+        
         <br>
-   
+        
+        <h3>Field of Expertise</h3>
         <!--- interests I pulled from the existing form, subject to change. same with name and id-->
         <input type=checkbox id="field1" name="field1" value="Physical Sciences">
         <label for="field1">Physical Sciences</label><br>
@@ -72,7 +77,16 @@
         <input type="checkbox" id="field_other" name="field_other" value="field_other">  -->
         <label for="field_other">Other:</label>
         <input type=text id="field_other" name="field_other"><br>
+        <br>
+
+        <lable for=extra_info>What skills,benefits, and advice do you have to offer your mentee?</lable>
+        <textarea name=extra_info rows=5 cols=50></textarea><br>
+        <br>
+
         <input type=submit value="Submit mentor aplication">
+
+        <br>
+        
     </form>
 
 </html>

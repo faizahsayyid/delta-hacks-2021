@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
+
     <head>
+        <link rel=stylesheet href=mentee_application.css>
         <title>Mentee Application Form</title>
     </head>
     <body>
@@ -41,18 +43,11 @@
         <label for=other_gr>Other: </label>
         <input type=text id="other_gr" name="grade"><br>
         <br>
-        <!--for what stuff they've do before, might not include for the mentee-->
-        <lable for="skills">Previous experience. I have tried:</lable><br>
-        <input type=checkbox id="code" name="code" value="code">
-        <label for="code">Coding</label><br>
-        <input type=checkbox id="temp2" name="temp2" value="temp2">
-        <label for="temp2">AutoCAD</label><br> 
-    </form>
-    <body>
+
+    
         <h2>Interests</h2>
         <p>The STEM field is diverse. Where do your interests fall? What would you like to learn from your mentor?</p>
-    </body>
-    <form>
+  
         <!--- interests I pulled from the existing form, subject to change. same with name and id-->
         <input type=checkbox id="field1" name="field1" value="Physical Sciences">
         <label for="field1">Physical Sciences</label><br>
@@ -71,6 +66,18 @@
         <label for="field_other">Other:</label>
         <input type=text id="field_other" name="field_other"><br>
         <br>
+        <!--for what skills they want to learn -->
+        <lable for="skills">I would like to hear about:</lable><br>
+        <input type=checkbox id="code" name="code" value="code">
+        <label for="code">Coding</label><br>
+        <input type=checkbox id="temp2" name="temp2" value="temp2">
+        <label for="temp2">AutoCAD</label><br> 
+        <input type=checkbox id="math" name="math" value="math">
+        <label for="math">Mathematic Modeling</label><br> 
+        <input type=checkbox id="bio" name="bio" value="bio">
+        <label for="bio">Disections</label><br> 
+        <br>
+
         <input type=submit value="Submit mentee application">
     </form>
 
