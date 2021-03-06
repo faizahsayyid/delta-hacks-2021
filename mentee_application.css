@@ -15,10 +15,23 @@ input[type=text] {
     border:none;
     border-bottom: 2px solid rgb(21, 9, 182);
 }
+
 input[type=email] {
     width:80%;
     padding: 12px 20px;
     margin: 8px 0;
     border:none;
     border-bottom: 2px solid rgb(21, 9, 182);
+}
+
+input[type=submit]{
+    background-color: darkcyan;
+    border: none;
+    color: darkgray;
+    text-align: center;
+    padding: 16px 31px;
+    border-radius: 4px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
 }
