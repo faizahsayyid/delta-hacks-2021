@@ -18,7 +18,7 @@ p {
 }
 
 .section1, .section2, .section3 {
-    background-color: rgba(100, 203, 207, 0.76);
+    /*background-color: rgba(100, 203, 207, 0.76);*/
     width: 500px;
     border:none;
     border-left: 8px solid rgb(33, 41, 153);

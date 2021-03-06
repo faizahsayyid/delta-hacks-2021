@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
+    <link rel=stylesheet href=mentor_application.css>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@600;700&display=swap" rel="stylesheet"> 
+    
     <head>
-        <link rel=stylesheet href=mentor_application.css>
+        
         <title>Mentor Application Form</title>
     </head>
     <body>
@@ -22,8 +26,9 @@
             <input type=text id="fname" name="fname"><br> 
             <label for="1name">Last name:</label><br>
             <input type=text id="lname" name="lname"><br>
-            <lable for="email">Email:</lable><br>
+            <lable for="email">Email address:</lable><br>
             <input type=email id="email" name="email"><br>
+            
             <br>
         </div>
         <div class=section2>
@@ -32,55 +37,61 @@
     
             <!--what grade are they in-->
             <label for="grade">Grade/Year:</label><br>
-            <input type=radio id="11" name="grade" value="11">
-            <label for="11">Grade 11</label><br>
-            <input type=radio id="12" name="grade" value="12">
-            <label for="12">Grade 12</label><br>
-            <input type=radio id="first" name="grade" value="first">
-            <label for="first">First year undergrad</label><br>
-            <input type=radio id="second" name="grade" value="second">
-            <label for="second">Second year undergrad</label><br>
-            <input type=radio id="third" name="grade" value="third">
-            <label for="third">Third year undergrad</label><br>
-            <input type=radio id="fourth" name="grade" value="fourth">
-            <label for="fourth">Fourth year undergrad</label><br>
-            <input type=radio id="grad" name="grade" value="grad">
-            <label for="grad">Graduate student</label><br>
-            <!--<input type="radio" id="other_gr" name="other_gr" value="other_gr">--><!--IDK if this line would override line 42 so I'm commenting it out-->
-            <label for="other_gr">Other: </label>
+            <div class=choices>
+                <input type=radio id="11" name="grade" value="11">
+                <label for="11">Grade 11</label><br>
+                <input type=radio id="12" name="grade" value="12">
+                <label for="12">Grade 12</label><br>
+                <input type=radio id="first" name="grade" value="first">
+                <label for="first">First year undergrad</label><br>
+                <input type=radio id="second" name="grade" value="second">
+                <label for="second">Second year undergrad</label><br>
+                <input type=radio id="third" name="grade" value="third">
+                <label for="third">Third year undergrad</label><br>
+                <input type=radio id="fourth" name="grade" value="fourth">
+                <label for="fourth">Fourth year undergrad</label><br>
+                <input type=radio id="grad" name="grade" value="grad">
+                <label for="grad">Graduate student</label><br>
+                <!--<input type="radio" id="other_gr" name="other_gr" value="other_gr">--><!--IDK if this line would override line 42 so I'm commenting it out-->
+                <label for="other_gr">Other: </label>
+            </div>
             <input type=text id="other_gr" name="other_gr"><br>
             <br>
             <!--for what stuff mentors have done before--->
             <lable for="skills">Previous experience:</lable><br>
-            <input type=checkbox id="code" name="code" value="code">
-            <label for="code">Coding</label><br>
-            <input type=checkbox id="model" name="model" value="model">
-            <label for="model">3D Modeling</label><br> 
-            <input type=checkbox id="math" name="math" value="math">
-            <label for="math">Mathematic Modeling</label><br> 
-            <input type=checkbox id="bio" name="bio" value="bio">
-            <label for="bio">Disections</label><br> 
+            <div class=choices>
+                <input type=checkbox id="code" name="code" value="code">
+                <label for="code">Coding</label><br>
+                <input type=checkbox id="model" name="model" value="model">
+                <label for="model">3D Modeling</label><br> 
+                <input type=checkbox id="math" name="math" value="math">
+                <label for="math">Mathematic Modeling</label><br> 
+                <input type=checkbox id="bio" name="bio" value="bio">
+                <label for="bio">Disections</label><br> 
+            </div>
             <!--as an example, other experiences can be added but probably not with other-->
         </div>    
         <br>
         <div class=section3>
             <h3>Field of Expertise</h3>
             <!--- interests I pulled from the existing form, subject to change. same with name and id-->
-            <input type=radio id="field1" name="field1" value="Physical Sciences">
-            <label for="field1">Physical Sciences</label><br>
-            <input type=radio id="field2" name="field2" value="Life Sciences">
-            <label for="field2">Life Sciences</label><br>
-            <input type=radio id="field3" name="field3" value="Computer Sciences">
-            <label for="field3">Computer Sciences</label><br>
-            <input type=radio id="field4" name="field4" value="Engineering">
-            <label for="field4">Engineering</label><br>
-            <input type=radio id="field5" name="field5" value="Mathematics">
-            <label for="field5">Mathematics</label><br>
-            <input type=radio id="field6" name="field6" value="unsure">
-            <label for="field6">I am unsure</label><br>
-            <!-- same as before unsure about override so just for safe,commenting
-            <input type=radio id="field_other" name="field_other" value="field_other">  -->
-            <label for="field_other">Other:</label>
+            <div class=choices>
+                <input type=radio id="field1" name="field1" value="Physical Sciences">
+                <label for="field1">Physical Sciences</label><br>
+                <input type=radio id="field2" name="field2" value="Life Sciences">
+                <label for="field2">Life Sciences</label><br>
+                <input type=radio id="field3" name="field3" value="Computer Sciences">
+                <label for="field3">Computer Sciences</label><br>
+                <input type=radio id="field4" name="field4" value="Engineering">
+                <label for="field4">Engineering</label><br>
+                <input type=radio id="field5" name="field5" value="Mathematics">
+                <label for="field5">Mathematics</label><br>
+                <input type=radio id="field6" name="field6" value="unsure">
+                <label for="field6">I am unsure</label><br>
+                <!-- same as before unsure about override so just for safe,commenting
+                <input type=radio id="field_other" name="field_other" value="field_other">  -->
+                <label for="field_other">Other:</label>
+            </div>
             <input type=text id="field_other" name="field_other"><br>
             <br>
 

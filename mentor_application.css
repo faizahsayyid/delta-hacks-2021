@@ -5,7 +5,8 @@ body {
 .header {
     padding: 20px;
     text-align: center;
-
+    font-family: 'Assistant', sans-serif;
+    font-weight: 700;
 }
 h1{
     color: #12122e;
@@ -22,6 +23,11 @@ p {
     border-radius: 4px;
     padding: 30px;
     margin: 20px;
+    font-family: 'Assistant', sans-serif;
+    font-weight: 600;
+}
+.choices{
+    line-height: 1.8;
 }
 
 input[type=text] {
@@ -40,10 +46,23 @@ input[type=email] {
     border-bottom: 2px solid rgb(33, 41,153);
 }
 
+/*.input[type=radio]{
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}*/
+
 textarea{
     resize: none;
     width: 500px;
     height: 100px;
+    border-radius: 4px;
 }
 
 input[type=submit]{
