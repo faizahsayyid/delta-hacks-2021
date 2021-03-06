@@ -1,85 +1,99 @@
 <!DOCTYPE html>
 <html>
-
+    <!--style setup-->
+    <link rel=stylesheet href=mentee_application.css>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@600;700&display=swap" rel="stylesheet"> 
+    
+    <!--start of the application form-->
     <head>
-        <link rel=stylesheet href=mentee_application.css>
         <title>Mentee Application Form</title>
     </head>
     <body>
-        <h1>STEMpowerment Mentee Application</h1>
-        <p>Thank you for showing interest in the STEMpowerment Mentorship Program! <br>Let us get to know you so we can connect you with a mentor that best suits you.</p>
+        <div class=header>
+            <h1>STEMpowerment Mentee Application</h1>
+            <p>Thank you for showing interest in the STEMpowerment Mentorship Program! <br>Let us get to know you so we can connect you with a mentor that best suits you.</p>
+        </div>        
     </body>
 
-    <body>
-        <h2>General info</h2>
-        <p>Please start with telling us who you are and how to contact you.</p>
-    </body>
-    <form>
-        <!-- all identifiers are subject to change-->
-        <label for="fname">First name:</label><br>
-        <input type=text id="fname" name="fname"><br> 
-        <label for="1name">Last name:</label><br>
-        <input type=text id="lname" name="lname"><br>
-        <lable for="email">Email:</lable><br>
-        <input type=email id="email" name="email"><br>
+    <form action="connect_mentee.php">
+        <div class=section>
+            <div class=section1>
+                <h2>General info</h2>
+                <p>Please start with telling us who you are and how to contact you.</p>
+            
+                <!-- all identifiers are subject to change-->
+                <label for="fname">First name:</label><br>
+                <input type=text id="fname" name="fname"><br> 
+                <label for="1name">Last name:</label><br>
+                <input type=text id="lname" name="lname"><br>
+                <lable for="email">Email:</lable><br>
+                <input type=email id="email" name="email"><br>
+            </div>
+            <br>
+            <div class=section2>
+                <h2>Experience level</h2>
+                <p>Where would you say your skills lie? What have you previously worked with? Let us know.</p>
+
+
+                <!--what grade are they in-->
+                <label for="grade">Grade/Year:</label><br>
+                <input type=radio id="9" name="grade" value="9">
+                <label for="9">Grade 9</label><br>
+                <input type=radio id="10" name="grade" value="10">
+                <label for="10">Grade 10</label><br>
+                <input type=radio id="11" name="grade" value="11">
+                <label for="11">Grade 11</label><br>
+                <input type=radio id="12" name="grade" value="12">
+                <label for="12">Grade 12</label><br>
+                <input type=radio id="other_gr" name="grade" value="other_gr"> <!--override text input?-->
+                <label for=other_gr>Other: </label>
+                <input type=text id="other_gr" name="grade"><br>
+                
+            </div>
+            <br>
+            <div class=section3>
+                <h2>Interests</h2>
+                <p>The STEM field is diverse. Where do your interests fall? What would you like to learn from your mentor?</p>
+          
+                <!--- interests I pulled from the existing form, subject to change. same with name and id-->
+                <label for="field">Fields of interest:</label><br>
+                <input type=radio id="field1" name="field1" value="Physical Sciences">
+                <label for="field1">Physical Sciences</label><br>
+                <input type=radio id="field2" name="field2" value="Life Sciences">
+                <label for="field2">Life Sciences</label><br>
+                <input type=radio id="field3" name="field3" value="Computer Sciences">
+                <label for="field3">Computer Sciences</label><br>
+                <input type=radio id="field4" name="field4" value="Engineering">
+                <label for="field4">Engineering</label><br>
+                <input type=radio id="field5" name="field5" value="Mathematics">
+                <label for="field5">Mathematics</label><br>
+                <input type=radio id="field6" name="field6" value="unsure">
+                <label for="field6">I am unsure</label><br>
+                <!-- same as before unsure about override so just for safe,commenting
+                <input type=radio id="field_other" name="field_other" value="field_other">  -->
+                <label for="field_other">Other:</label>
+                <input type=text id="field_other" name="field_other"><br>
+                <br>
+                <!--for what skills they want to learn -->
+                <lable for="skills">Skills of interest:</lable><br>
+                <input type=radio id="code" name="code" value="code">
+                <label for="code">Coding</label><br>
+                <input type=radio id="temp2" name="temp2" value="temp2">
+                <label for="temp2">AutoCAD</label><br> 
+                <input type=radio id="math" name="math" value="math">
+                <label for="math">Mathematic Modeling</label><br> 
+                <input type=radio id="bio" name="bio" value="bio">
+                <label for="bio">Disections</label><br> 
+            </div>
+        </div>   
         <br>
 
+        <div class=submit_button>
+            <input type=submit value="Submit mentee application">
+        </div>
 
-        <h2>Experience level</h2>
-        <p>Where would you say your skills lie? What have you previously worked with? Let us know.</p>
-
-
-        <!--what grade are they in-->
-        <label for="grade">Grade/Year:</label><br>
-        <input type=radio id="9" name="grade" value="9">
-        <label for="9">Grade 9</label><br>
-        <input type=radio id="10" name="grade" value="10">
-        <label for="10">Grade 10</label><br>
-        <input type=radio id="11" name="grade" value="11">
-        <label for="11">Grade 11</label><br>
-        <input type=radio id="12" name="grade" value="12">
-        <label for="12">Grade 12</label><br>
-        <input type=radio id="other_gr" name="grade" value="other_gr"> <!--override text input?-->
-        <label for=other_gr>Other: </label>
-        <input type=text id="other_gr" name="grade"><br>
         <br>
-
-    
-        <h2>Interests</h2>
-        <p>The STEM field is diverse. Where do your interests fall? What would you like to learn from your mentor?</p>
-  
-        <!--- interests I pulled from the existing form, subject to change. same with name and id-->
-        <label for="field">Fields of interest:</label>
-        <input type=checkbox id="field1" name="field1" value="Physical Sciences">
-        <label for="field1">Physical Sciences</label><br>
-        <input type=checkbox id="field2" name="field2" value="Life Sciences">
-        <label for="field2">Life Sciences</label><br>
-        <input type=checkbox id="field3" name="field3" value="Computer Sciences">
-        <label for="field3">Computer Sciences</label><br>
-        <input type=checkbox id="field4" name="field4" value="Engineering">
-        <label for="field4">Engineering</label><br>
-        <input type=checkbox id="field5" name="field5" value="Mathematics">
-        <label for="field5">Mathematics</label><br>
-        <input type=checkbox id="field6" name="field6" value="unsure">
-        <label for="field6">I am unsure</label><br>
-        <!-- same as before unsure about override so just for safe,commenting
-        <input type="checkbox" id="field_other" name="field_other" value="field_other">  -->
-        <label for="field_other">Other:</label>
-        <input type=text id="field_other" name="field_other"><br>
-        <br>
-        <!--for what skills they want to learn -->
-        <lable for="skills">Skills of interest:</lable><br>
-        <input type=checkbox id="code" name="code" value="code">
-        <label for="code">Coding</label><br>
-        <input type=checkbox id="temp2" name="temp2" value="temp2">
-        <label for="temp2">AutoCAD</label><br> 
-        <input type=checkbox id="math" name="math" value="math">
-        <label for="math">Mathematic Modeling</label><br> 
-        <input type=checkbox id="bio" name="bio" value="bio">
-        <label for="bio">Disections</label><br> 
-        <br>
-
-        <input type=submit value="Submit mentee application">
     </form>
 
 </html>
