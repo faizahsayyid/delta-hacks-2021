@@ -1,8 +1,8 @@
 from typing import Optional
 
 class MatchingManager:
-    mentors: list[Mentor]
-    mentees: list[Mentee]
+    #mentors: list[Mentor]
+    #mentees: list[Mentee] 
 
     def __init__(self, mentors, mentees):
         #list of mentors and mentees
