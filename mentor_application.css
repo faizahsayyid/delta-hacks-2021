@@ -17,12 +17,13 @@ p {
 
 .section1, .section2, .section3 {
     background-color: rgb(100, 204, 207);
-    width: 80%;
+    width: 500px;
     border:none;
     border-left: 8px solid rgb(33, 41, 153);
     border-radius: 4px;
     padding: 30px;
-    margin: 20px;
+    margin-top: 200px;
+    margin: 20px auto;
     font-family: 'Assistant', sans-serif;
     font-weight: 600;
 }
@@ -74,7 +75,7 @@ input[type=submit]{
     border-radius: 4px;
     text-decoration: none;
     display: inline-block;
-    margin: 4px 2px;
+    margin: auto;
     transition-duration: 0.4s;
     cursor: pointer;
 }
