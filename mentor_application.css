@@ -17,7 +17,7 @@ p {
 
 .section1, .section2, .section3 {
     background-color: rgb(100, 204, 207);
-    width: 500px;
+    width: 80%;
     border:none;
     border-left: 8px solid rgb(33, 41, 153);
     border-radius: 4px;
