@@ -120,32 +120,6 @@ class Mentee:
         self.mentor = Optional[Mentor]
 
 
-        '''
-        if mentor previous_experiences match with mentee interest
-            then match them
-            return True
-        elif mentor field_of_study match with mentee interests
-            match them
-            return True
-        else:
-            don't match them
-            return False
-        '''
-
-
-        '''
-        weights:
-         if more than 3 skills and fields match: 100%
-            match that mentor and mentee together
-        elif mote than 2 skills and fields match: 75%
-            they are a good match unless there are better combinations
-        elif (only  1 skill match) or (only fields match): 50%
-            match them together if there arent any other better combinations
-        else no match: 0%
-            neither match then try to find a better mentor
-            unless all are matches are the same
-        '''
-
 if __name__ == '__main__': 
     import pytest
     pytest.main(['mentor_mentee_classes.py', '-v'])  
