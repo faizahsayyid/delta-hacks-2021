@@ -53,7 +53,7 @@ class MatchingTest(unittest.TestCase):
         self.mentors[].mentees = []
         self.mentors[].mentees = [self.mentees[]]
 
-        matching = Matching(self.mentees, self.mentors)
+        matching = MatchingTest(self.mentees, self.mentors)
         expectedMatchedMentees = [self.mentees[],self.mentees[]]
         expectedUnmatchedMentees = [self.mentees[]]]
         expectedMatchedMentors = [self.mentors[], self.mentors[]]
