@@ -4,6 +4,7 @@ body {
 
 .header {
     padding: 20px;
+    padding-top: 50px;
     text-align: center;
     font-family: 'Assistant', sans-serif;
     font-weight: 700;
@@ -15,12 +16,10 @@ p {
     color: #000000
 }
 
-.section1, .section2, .section3 {
+.sign_off {
     background-color: rgb(100, 204, 207);
-    width: 500px;
     border:none;
-    border-left: 8px solid rgb(33, 41, 153);
-    border-radius: 4px;
+    text-align: center;
     padding: 30px;
     margin: 20px;
     font-family: 'Assistant', sans-serif;
