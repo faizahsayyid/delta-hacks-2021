@@ -20,7 +20,7 @@ $skill2 = $_REQUEST["skill2"];
 $skill3 = $_REQUEST["skill3"];
 $skill4 = $_REQUEST["skill4"];
 $field = $_REQUEST["field"];
-$mentor = TRUE;
+$mentor = 1;
 
 $skills = $skill1 . ',' . $skill2 . ',' . $skill3 . ',' . $skill4;
 
