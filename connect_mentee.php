@@ -29,7 +29,7 @@ if ($conn->query($sql) === TRUE) {
     echo "<br> Error: " . $sql . "<br>" . $conn->error;
 }
 
-header("refresh:2; url=mentee_application.html");
+header("refresh:2; url=completed_mentee.html");
 
 $conn->close();
 ?>
