@@ -10,18 +10,26 @@ if ($conn->connect_error){
 }
 echo "Connected succesfully";
 
-$first_name = $_POST{'fname'};
-$last_name = $_POST{'lname'};
-$email = $_POST{'email'};
+$first_name = $_POST{"fname"};
+$last_name = $_POST{"lname"};
+$email = $_POST{"email"};
 $experience_level = 'something';
 $skills = 'something';
 $field = 'something';
 $mentor = TRUE;
 
 
-$sql = "INSERT INTO application (first_name, last_name, email, experience_level, 
-                                skills, field, mentor)
-                VALUES ($first_name, $last_name, $email, $experience_level, 
-                        $skills, $mentor)"
+// $sql = "INSERT INTO application (first_name, last_name, email, experience_level, skills, field, mentor) 
+// VALUES ($first_name, $last_name, $email, $experience_level, $skills, $field, $mentor)";
+
+// if ($conn->query($sql) === TRUE) {
+//     echo "Application Submitted";
+// } else {
+//     echo "Error: " . $sql . "<br>" . $conn->error;
+// }
+
+
+  
+// $conn->close();
 
 ?>
