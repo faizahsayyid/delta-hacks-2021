@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(240, 211, 176);
+    background-color: rgb(240, 248, 239);
     /*background-image: linear-gradient(to bottom right, rgb(9, 106, 197), rgb(200, 152, 231));*/
 }
 
@@ -11,30 +11,32 @@ body {
     font-weight: 700;
 }
 h1{
-    color: #12122e;
+    color: #2e1213;
 }
 p {
     color: #000000
 }
 
 .section1, .section2, .section3 {
-    /*background-color: rgba(100, 203, 207, 0.76);*/
+    background-color: #E3AEAA;
     width: 500px;
     border:none;
-    border-left: 8px solid rgb(33, 41, 153);
+    border-left: 8px solid #850900;
     border-radius: 4px;
     padding: 30px;
-    margin: 20px;
+    margin: 20px auto;
     font-family: 'Assistant', sans-serif;
     font-weight: 600;
 }
-
+.choices{
+    line-height: 1.8;
+}
 input[type=text] {
     width:50%;
     padding: 8px 15px;
     margin: 8px 0;
     border:none;
-    border-bottom: 2px solid rgb(33,41,153);
+    border-bottom: 2px solid #850900;
 }
 
 input[type=email] {
@@ -42,11 +44,13 @@ input[type=email] {
     padding: 8px 15px;
     margin: 8px 0;
     border:none;
-    border-bottom: 2px solid rgb(33, 41,153);
+    border-bottom: 2px solid #850900;
 }
 
+
+
 input[type=submit]{
-    background-color: rgb(10, 161, 161);
+    background-color: #DB2D21;
     border: none;
     color: rgb(228, 228, 228);
     text-align: center;
@@ -57,9 +61,6 @@ input[type=submit]{
     margin: auto;
     transition-duration: 0.4s;
     cursor: pointer;
-
-    font-family: 'Assistant', sans-serif;
-    font-weight: 600;
 }
 
 .submit_button{
