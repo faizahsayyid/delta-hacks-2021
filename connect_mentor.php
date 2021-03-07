@@ -15,10 +15,14 @@ $first_name = $_REQUEST["fname"];
 $last_name = $_REQUEST["lname"];
 $email = $_REQUEST["email"];
 $experience_level = $_REQUEST["grade"];
-$skills = $_REQUEST["skills"];
+$skill1 = $_REQUEST["skill1"];
+$skill2 = $_REQUEST["skill2"];
+$skill3 = $_REQUEST["skill3"];
+$skill4 = $_REQUEST["skill4"];
 $field = $_REQUEST["field"];
 $mentor = TRUE;
 
+$skills = $skill1 . ',' . $skill2 . ',' . $skill3 . ',' . $skill4;
 
 $sql = "INSERT INTO application (first_name, last_name, email, experience_level, skills, field, mentor) 
 VALUES ('$first_name', '$last_name', '$email', '$experience_level', '$skills', '$field', '$mentor')";
