@@ -1,18 +1,20 @@
 import os
 import sys
 import unittest
-from backend.mentor_mentee_classes import Mentor
-from backend.mentor_mentee_classes import Mentee
-from backend.mentor_mentee_classes import MatchingManager
+from mentor_mentee_classes import Mentor
+from mentor_mentee_classes import Mentee
+from mentor_mentee_classes import MatchingManager
 
 class MatchingTest(unittest.TestCase):
 
     def __init__(self, methodName='runTest'):
         super(MatchingTest, self).__init__(methodName)
+        self.mentors = []
+        self.mentees = []
         #self,netId,firstName,lastName,email, year,field_of_study,experiences, skills, mentees
         # Construct basic mentor & mentee structures
         self.mentors = [
-            Mentor("u1" "1", "A",'none1@gmail.com', 'first', "Physical Science", "Coding", self.metees),
+            Mentor("u1" "1", "A",'none1@gmail.com', 'first', "Physical Science", "Coding", self.mentees),
             Mentor("u2" "2", "B", 'none2@gmail.com', 'first' , "Mathematics", "Coding", self.mentees),
             Mentor("u3", "3" "C", 'none3@gmail.com', 'second' , "Computer Science", "3D Modelling", self.mentees),
         ]
@@ -47,15 +49,15 @@ class MatchingTest(unittest.TestCase):
     def testUnmatchedMenteesAndMentors(self):
 
         # Construct a matching with no unmatched mentors or mentees
-        self.mentors[0].mentees = [self.mentees[0]]
-        self.mentors[1].mentees = []
-        self.mentors[2].mentees = [self.mentees[1]]
+        self.mentors[].mentees = [self.mentees[]]
+        self.mentors[].mentees = []
+        self.mentors[].mentees = [self.mentees[]]
 
         matching = Matching(self.mentees, self.mentors)
-        expectedMatchedMentees = [self.mentees[0],self.mentees[1]]
-        expectedUnmatchedMentees = [self.mentees[2]]
-        expectedMatchedMentors = [self.mentors[0], self.mentors[2]]
-        expectedUnmatchedMentors = [self.mentors[1]]
+        expectedMatchedMentees = [self.mentees[],self.mentees[]]
+        expectedUnmatchedMentees = [self.mentees[]]]
+        expectedMatchedMentors = [self.mentors[], self.mentors[]]
+        expectedUnmatchedMentors = [self.mentors[]]
 
         self.assertItemsEqual(expectedMatchedMentees, matching.getMatchedMentees())
         self.assertItemsEqual(expectedMatchedMentors, matching.getMatchedMentors())
