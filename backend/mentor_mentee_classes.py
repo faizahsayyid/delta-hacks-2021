@@ -1,5 +1,22 @@
 from typing import Optional
 
+def test_matching():
+    mentors = [
+        Mentor("u1" "1", "A",'none1@gmail.com', 'first', "Physical Science", "Coding", self.mentees),
+        Mentor("u2" "2", "B", 'none2@gmail.com', 'first' , "Mathematics", "Coding", self.mentees),
+        Mentor("u3", "3" "C", 'none3@gmail.com', 'second' , "Computer Science", "3D Modelling", self.mentees)]
+
+    mentees = [
+        Mentee('user1', 'Jo', 'Smith','user1@gmail.com', '9', "Mathematics", "Coding", self.mentor),
+        Mentee('user2', 'Do', 'Smith','user2@@gmail.com', '10', "Physics" , "3D Modelling", self.mentor),
+        Mentee('user3', 'Po', 'Smith', 'user3@gmail.com','11',  "Computer Science", "Disections", self.mentor)]
+
+
+    pairs = MatchingManager(mentors, mentees)
+
+    assert pairs.matchedPairs(mentors[0], mentees[0]) == 0
+
+
 class MatchingManager:
     #mentors: list[Mentor]
     #mentees: list[Mentee] 
@@ -129,3 +146,6 @@ class Mentee:
             neither match then try to find a better mentor
             unless all are matches are the same
         '''
+if __name__ == '__main__': 
+    import pytest
+    pytest.main(['mentor_mentee_classes.py', '-v'])  
