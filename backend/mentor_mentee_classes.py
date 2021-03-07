@@ -2,14 +2,14 @@ from typing import Optional
 
 def test_matching():
     mentors = [
-        Mentor("u1" "1", "A",'none1@gmail.com', 'first', "Physical Science", "Coding", self.mentees),
-        Mentor("u2" "2", "B", 'none2@gmail.com', 'first' , "Mathematics", "Coding", self.mentees),
-        Mentor("u3", "3" "C", 'none3@gmail.com', 'second' , "Computer Science", "3D Modelling", self.mentees)]
+        Mentor("u1" "1", "A",'none1@gmail.com', 'first', "Physical Science", "Coding", []),
+        Mentor("u2" "2", "B", 'none2@gmail.com', 'first' , "Mathematics", "Coding", []),
+        Mentor("u3", "3" "C", 'none3@gmail.com', 'second' , "Computer Science", "3D Modelling", [])]
 
     mentees = [
-        Mentee('user1', 'Jo', 'Smith','user1@gmail.com', '9', "Mathematics", "Coding", self.mentor),
-        Mentee('user2', 'Do', 'Smith','user2@@gmail.com', '10', "Physics" , "3D Modelling", self.mentor),
-        Mentee('user3', 'Po', 'Smith', 'user3@gmail.com','11',  "Computer Science", "Disections", self.mentor)]
+        Mentee('user1', 'Jo', 'Smith','user1@gmail.com', '9', "Mathematics", "Coding"),
+        Mentee('user2', 'Do', 'Smith','user2@@gmail.com', '10', "Physics" , "3D Modelling"),
+        Mentee('user3', 'Po', 'Smith', 'user3@gmail.com','11',  "Computer Science", "Disections")]
 
 
     pairs = MatchingManager(mentors, mentees)
@@ -18,8 +18,8 @@ def test_matching():
 
 
 class MatchingManager:
-    #mentors: list[Mentor]
-    #mentees: list[Mentee] 
+    mentors: list[Mentor]
+    mentees: list[Mentee] 
 
     def __init__(self, mentors, mentees):
         #list of mentors and mentees
@@ -74,13 +74,22 @@ class MatchingManager:
         else:
             return 0     
 
+
 class Mentor:
     """
     Precondition: 
         - 1 <= len(mentee) <= 2
     """
+    mentor_name: str
+    mentor_grade: str
+    mentor_email: str
+    schooling: str 
+    field_of_study: str
+    skills: list[str]
+    experiences : list[str]
+    mentee: list[Mentee]
+    
     def __init__(self,netId,firstName,lastName,email, year,field_of_study,experiences, skills, mentees):
-
         self.Id = netId
         self.firstName = firstName
         self.lastName = lastName
@@ -91,16 +100,15 @@ class Mentor:
         self.skills = skills
         self.mentees = list[Mentee]
 
-        # mentor_name: str
-        # mentor_grade: str
-        # mentor_email: str
-        # schooling: str 
-        # field_of_study: str
-        # skills: list[str]
-        # experiences : list[str]
-        # mentee: list[Mentee]
 
 class Mentee:
+    mentee_name: str
+    mentee_grade: str
+    mentee_email: str
+    field_of_interest: str
+    skills_of_interest: str
+    mentor = Optional[Mentor]
+    
     def __init__(self, netId, firstName,lastName,email, year,field_of_interest, skills_of_interest, mentor):
         self.Id = netId
         self.firstName = firstName
@@ -110,15 +118,6 @@ class Mentee:
         self.field_of_interest = field_of_interest
         self.skills_of_interest = skills_of_interest
         self.mentor = Optional[Mentor]
-
-        # mentee_name: str
-        # mentee_grade: str
-        # mentee_email: str
-        # schooling: str
-        # field_of_study: str
-        # skills: list[str]
-        # experiences: list[str]
-        # mentor = Optional[Mentor]
 
 
         '''
@@ -146,6 +145,7 @@ class Mentee:
             neither match then try to find a better mentor
             unless all are matches are the same
         '''
+
 if __name__ == '__main__': 
     import pytest
     pytest.main(['mentor_mentee_classes.py', '-v'])  
