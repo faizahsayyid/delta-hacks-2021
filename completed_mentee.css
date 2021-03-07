@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(248, 244, 239);
+    background-color: rgb(240, 248, 239);
 }
 
 .header {
@@ -17,7 +17,7 @@ p {
 }
 
 .sign_off {
-    background-color: rgb(100, 204, 207);
+    background-color: #E3AEAA;
     border:none;
     text-align: center;
     padding: 30px;
@@ -34,7 +34,7 @@ input[type=text] {
     padding: 8px 15px;
     margin: 8px 0;
     border:none;
-    border-bottom: 2px solid rgb(33,41,153);
+    border-bottom: 2px solid #850900;
 }
 
 .container {
